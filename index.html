@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+  <div class="wrapper "  > 
+  <div class="heading ">
+    <p class="lifeSever">Life Sever</p>
+
+
+  </div>
+
+
+ <div class=" flex  justify-around my-10 flex-wrap text-3xl gap-4 ">
+  <button id="your-location" class="bg-white  ">Your location</button>
+  <button id="search-city"  class="bg-white " >Search City</button>
+
+</div>
+
+<div id="search-section"   class="  flex justify-center gap-4  flex-wrap">
+   <input type="text" placeholder="Search City ....." id="search-bar" class="w-80 h-10 border-spacing-28 border-black rounded-lg p-3 text-xl hover:shadow-lg shadow-yellow-200 border-blue-600">
+   <button id="searh-aqi" class=" gap-10 bg-white w-24 h-10 text-center rounded-lg text-xl  bg-slate-200 " >Search</button>
+  </div>
+ 
+ 
+  <div id="ShowData" >
+   
+   <p id="loading" class="text-center font-bold text-2xl ">Data is loding.....</p>
+
+
+   <div id="city-name" class="flex  justify-center my-16">
+    <img src="images/position-logo.png" width="150px" alt="position-logo">
+    <p id="city-names" class="font-bold text-4xl py-10"></p>
+   </div>
+
+  <div  class="text-center font-bold text-2xl"> Air Quality: <span id="aqi"></span>µg/m³  (<span id="air-quality"></span>)</div>
+   <div>
+    <img  id="images"  src=""  width="400px" alt="">
+    
+   <div id="text-discp" class="text-center font-bold text-2xl"></div>    
+    <p class=" text-3xl  font-bold  text-center py-10 ">Air-Pollutent</p>
+   <div id="air-polluted" class=" flex justify-around flex-wrap font-bold text-2xl py-10 gap-5">
+
+
+    
+   
+    
+      <div id="No2" class="unactive  text-center w-40  h-40 bg-white rounded-md space-y-3">
+        <p class="text-center">No2</p>
+        <p  class="text-center inline-block" id="no2-unit"></p><span class="text-sm">µg/m³</span>
+        <p id="no2-limit">Save limit</p>
+      </div>
+      <div id="O3" class="unactive text-center w-40  h-40 bg-white rounded-md space-y-3">
+        <p class="text-center">O3</p>
+        <p class="text-center inline-block" id="o3-unit"></p><span class="text-sm">µg/m³</span>
+        <p id="o3-limit" class=" text-xl">Save limit</p>
+      </div>
+      <div id="So2" class="unactive text-center w-40  h-40 bg-white rounded-md space-y-3">
+        <p class="text-center">So2</p>
+        <p class="text-center inline-block" id="so2-unit"></p><span class="text-sm">µg/m³</span>
+        <p id="so2-limit" class=" text-xl">Save limit</p>
+      </div>
+      
+      <div id="Pm25" class="unactive text-center w-40  h-40 bg-white rounded-md space-y-3">
+        <p class="text-center">Pm2.5</p>
+        <p class="text-center inline-block" id="pm25-unit"></p><span class="text-sm">µg/m³</span>
+        <p id="pm25-limit" class=" text-xl">Save limit</p>
+      </div>
+    
+      <div id="Pm10" class="unactive text-center w-40  h-40 bg-white rounded-md space-y-3">
+        <p class="text-center">Pm10</p>
+        <p class="text-center inline-block" id="pm10-unit"></p><span class="text-sm">µg/m³</span>
+        <p id="pm10-limit" class=" text-xl">Save limit</p>
+      </div>
+
+ 
+      
+
+   </div>
+   
+     
+   
+<div class="flex-row text-2xl space-y-12 space-x-5 m-10">
+ <div class="space-y-3" >
+ 
+  
+   <h2 class="font-bold py-5 " >Particulate Matter (PM10 and PM2.5)</h2>
+   
+    <p>   Sources: Construction sites, unpaved roads, smokestacks, fires, vehicle emissions. </p>
+<p> Harmful Effects: Respiratory and cardiovascular problems, lung cancer, premature death, environmental degradation.</p>
+<p> Safe Limits: WHO: PM2.5 - 24-hour mean of 15 µg/m³, annual mean of 5 µg/m³; PM10 - 24-hour mean of 45 µg/m³, annual mean of 15 µg/m³; EPA: PM2.5 - 24-hour average of 35 µg/m³, annual average of 12 µg/m³; PM10 - 24-hour average of 150 µg/m³. </p>
+     
+</div>
+
+<div class="space-y-3">
+
+  <h2 class="font-bold py-5 space-y-3"">Nitrogen Dioxide (NO₂)</h2>
+
+  <p>Sources: Vehicle emissions, power plants, industrial activities.</p>
+  <p>Harmful Effects: Respiratory issues, reduced lung function, increased susceptibility to respiratory infections, contributes to ground-level ozone and particulate matter formation. </p>
+  <p>Safe Limits: WHO: 1-hour mean of 200 µg/m³; EPA: Annual average of 53 ppb, 1-hour average of 100 ppb. </p>
+</div>
+<div class="space-y-3">
+ <h2 class="font-bold py-5 space-y-3"> Ozone (O₃)</h2>
+<p>Sources: Formed by the reaction of sunlight with pollutants such as VOCs and NOx.</p>
+<p>
+Harmful Effects: Respiratory problems, exacerbation of asthma, reduced lung function, harmful to vegetation and ecosystems.</p>
+<p>Safe Limits: WHO: 8-hour mean of 100 µg/m³; EPA: 8-hour average of 70 ppb.</p>
+
+
+
+</div>
+<div class="space-y-3">
+  <h2 class="font-bold py-5 space-y-3">Sulfur Dioxide (SO₂)</h2>
+<p>Sources: Burning of coal and oil, industrial processes, volcanic eruptions.
+</p>
+<p>Harmful Effects: Respiratory problems, aggravation of heart and lung diseases, formation of acid rain.</p>
+<p>
+Safe Limits: WHO: 24-hour mean of 20 µg/m³; EPA: 1-hour average of 75 ppb (parts per billion).</p>
+
+
+
+
+</div>
+ </div>
+   </div>
+
+
+
+
+  </div>
+ 
+ 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <!-- <button  id="current-location">Current location AQI </button>     
+   <p id="API"></p>
+
+    <input type="text" placeholder="Search city...."  id="search_City">
+    <button id="searchButton"> searchButton</button> -->
+
+
+
+
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" ></script>
+</body>
+</html>

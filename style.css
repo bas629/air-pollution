@@ -1,0 +1,117 @@
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+
+} 
+body{
+  background-color: pink;
+}
+.heading
+{ height: 10vh;
+background-color: #ED4343;
+background-image: url('images/lofo.png'); 
+background-size:80px; 
+background-repeat: no-repeat; 
+background-position: 40vw -12px;
+
+}
+.lifeSever
+{
+   padding-left: 45vw;
+   padding-top: 1px;
+   font-size: xxx-large;
+   font-weight: bolder;
+   color: white;
+
+
+}
+#images
+{ margin-left: 40%;
+   margin-top: 20px;
+
+
+
+}
+#text-discp
+{ text-align: center;
+   margin-top: 20px;
+   font-style: italic;
+ 
+}
+
+#search-section{
+ scale: 0;
+}
+button {
+   background-color: white;
+   color: black;
+   border-radius: 10em;
+   font-size: 17px;
+   font-weight: 600;
+   padding: 1em 2em;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   border: 1px solid black;
+   box-shadow: 0 0 0 0 black; 
+   width: 200px;
+ }
+ 
+ button:hover {
+   transform: translateY(-4px) translateX(-2px);
+   box-shadow: 2px 5px 0 0 black;
+ }
+ 
+ button:active {
+   transform: translateY(2px) translateX(1px);
+   box-shadow: 0 0 0 0 black;
+ }
+
+ #ShowData
+ {
+    scale:0;
+ }
+
+ #loading
+ {
+   scale: 0;
+
+
+ }
+
+ .unactive
+ {
+   box-shadow: 10px 5px 5px whitesmoke; 
+ }
+ .active
+ {
+   color:red;
+     box-shadow: 10px 5px 5px red; 
+ }
+
+  
+
+@media  screen and (max-width: 724px) {
+  #images
+  {
+    margin-left: 4%;
+  }
+  
+  .heading {
+    height: 10vh;
+    background-color: #ED4343;
+    background-image: url('images/lofo.png');
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: 12vw -12px;
+  }
+  .lifeSever {
+    padding-left: 32vw;
+    padding-top: 1px;
+    font-size: xxx-large;
+    font-weight: bolder;
+    color: white;
+  }
+};
