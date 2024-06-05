@@ -4,7 +4,7 @@
 *{
   padding: 0;
   margin: 0;
-
+overflow-x: hidden;
 } 
 body{
   background-color: pink;
@@ -29,9 +29,13 @@ background-position: 40vw -12px;
 
 }
 #images
-{ margin-left: 40%;
-   margin-top: 20px;
-
+{ 
+  
+  
+  /* margin-left: 40%;
+   margin-top: 20px; */
+   display: flex;
+   justify-content:center ;
 
 
 }
@@ -96,7 +100,8 @@ button {
 @media  screen and (max-width: 724px) {
   #images
   {
-    margin-left: 4%;
+    display: flex;
+    justify-content:center ;
   }
   
   .heading {

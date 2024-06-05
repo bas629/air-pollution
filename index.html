@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Document</title>
 <link rel="stylesheet" href="style.css">
 
@@ -10,19 +11,19 @@
 <body> 
   <div class="wrapper "  > 
   <div class="heading ">
-    <p class="lifeSever">Life Sever</p>
+    <p class="lifeSever">Life Saver</p>
 
 
   </div>
 
 
- <div class=" flex  justify-around my-10 flex-wrap text-3xl gap-4 ">
+ <div class=" flex  justify-around py-8 flex-wrap text-3xl gap-4 ">
   <button id="your-location" class="bg-white  ">Your location</button>
   <button id="search-city"  class="bg-white " >Search City</button>
 
 </div>
 
-<div id="search-section"   class="  flex justify-center gap-4  flex-wrap">
+<div id="search-section"   class="  flex justify-center gap-4  py-5flex-wrap">
    <input type="text" placeholder="Search City ....." id="search-bar" class="w-80 h-10 border-spacing-28 border-black rounded-lg p-3 text-xl hover:shadow-lg shadow-yellow-200 border-blue-600">
    <button id="searh-aqi" class=" gap-10 bg-white w-24 h-10 text-center rounded-lg text-xl  bg-slate-200 " >Search</button>
   </div>
@@ -40,7 +41,7 @@
 
   <div  class="text-center font-bold text-2xl"> Air Quality: <span id="aqi"></span>µg/m³  (<span id="air-quality"></span>)</div>
    <div>
-    <img  id="images"  src=""  width="400px" alt="">
+    <div class="flex justify-center"><img  id="images"  src=""  width="400px" alt=""></div>
     
    <div id="text-discp" class="text-center font-bold text-2xl"></div>    
     <p class=" text-3xl  font-bold  text-center py-10 ">Air-Pollutent</p>
@@ -53,7 +54,7 @@
       <div id="No2" class="unactive  text-center w-40  h-40 bg-white rounded-md space-y-3">
         <p class="text-center">No2</p>
         <p  class="text-center inline-block" id="no2-unit"></p><span class="text-sm">µg/m³</span>
-        <p id="no2-limit">Save limit</p>
+        <p id="no2-limit"  class=" text-xl">Save limit</p>
       </div>
       <div id="O3" class="unactive text-center w-40  h-40 bg-white rounded-md space-y-3">
         <p class="text-center">O3</p>

@@ -94,11 +94,52 @@ function render(data,cityData)
   pm10Unit.innerText=data?.list?.[0]?.components?.pm10 + "  ";
  so2Unit.innerText=data?.list?.[0]?.components?.so2 + "  ";
  no2Unit.innerText=data?.list?.[0]?.components?.no2 + "  ";
-  if(pm25Unit.value >15 )
-    {
-         pm25Unit.style.color="red";
 
-    }    
+ Pm25.classList.remove( 'active');
+ pm25_limit.innerText=" Save Limit";
+  
+ o3.classList.remove( 'active');
+ o3_limit.innerText=" Save Limit";
+
+ pm10.classList.remove( 'active');
+ pm10_limit.innerText=" Save Limit";
+
+ no2.classList.remove( 'active');
+ no2_limit.innerText=" Save Limit";
+
+ so2.classList.remove( 'active');
+ so2_limit.innerText="Save Limit";
+
+   airdesc(data?.list?.[0]?.main?.aqi );
+   if( (parseInt(pm25Unit.innerHTML))>15  )
+    {
+         Pm25.classList.add( 'active');
+         pm25_limit.innerText="Above Than save Limit";
+
+    } 
+   
+    if( (parseInt(o3Unit.innerHTML))>100  )
+      {
+           o3.classList.add('active');
+           o3_limit.innerText="Above Than save Limit";
+      } 
+      if( (parseInt(pm10Unit.innerHTML))>45  )
+        {
+             pm10.classList.add( 'active');
+             pm10_limit.innerText="Above Than save Limit";
+    
+        } 
+        if( (parseInt(no2Unit.innerHTML))>25  )
+          {
+               no2.classList.add( 'active');
+                  no2_limit.innerText="Above Than save Limit";
+          } 
+          if( (parseInt(so2Unit.innerHTML))>40  )
+            {
+                so2.classList.add( 'active'); 
+                so2_limit.innerText="Above Than save Limit";
+        
+            } 
 
 
 
